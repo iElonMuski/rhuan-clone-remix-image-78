@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -43,7 +44,7 @@ const Index = () => {
               transition={{ duration: 0.5 }}
               className="text-5xl md:text-6xl font-bold mb-6"
             >
-              Olá, eu sou o Igor.
+              Olá, eu sou o Luis Fernando.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -74,7 +75,7 @@ const Index = () => {
             <div className="w-full h-[400px] relative overflow-hidden rounded-3xl">
               <img 
                 src="https://drive.google.com/uc?export=download&id=1JL_vt7x-45a-KZFs8z7Ze2vYSo6tKT6n" 
-                alt="Igor"
+                alt="Luis Fernando"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -149,7 +150,7 @@ const Index = () => {
               Estou sempre aberto a novas oportunidades e colaborações.
             </p>
             <a
-              href="mailto:seu-email@exemplo.com"
+              href="mailto:ffnandofferreira@gmail.com"
               className="inline-block bg-purple-500 hover:bg-purple-600 transition-colors px-6 py-3 rounded-full"
             >
               Enviar mensagem
@@ -159,7 +160,8 @@ const Index = () => {
 
         {/* Footer */}
         <footer className="text-center text-gray-400 py-8">
-          <p>&copy; {new Date().getFullYear()} Igor. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Luis Fernando. Todos os direitos reservados.</p>
+          <p className="mt-2 text-sm">Contato: (22) 99794-6175</p>
         </footer>
       </div>
     </div>
