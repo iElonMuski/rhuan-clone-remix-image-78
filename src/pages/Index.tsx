@@ -1,37 +1,21 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
-const ProjectCard = ({ title, description, tags, link }: { title: string; description: string; tags: string[], link?: string }) => (
+const ProjectCard = ({ title, description, tags }: { title: string; description: string; tags: string[] }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
-    className="bg-[#1C1C1C] p-8 rounded-3xl h-full relative"
+    className="bg-[#1C1C1C] p-8 rounded-3xl h-full"
   >
     <h3 className="text-2xl font-bold mb-4">{title}</h3>
     <p className="text-gray-400 mb-6">{description}</p>
-    <div className="flex flex-wrap gap-3 mb-12">
+    <div className="flex flex-wrap gap-3">
       {tags.map((tag, index) => (
         <span key={index} className="bg-[#2A2A2A] px-4 py-2 rounded-full text-sm">{tag}</span>
       ))}
     </div>
-    {link ? (
-      <Link 
-        to={link} 
-        className="absolute bottom-8 right-8 flex items-center gap-2 text-purple-500 hover:text-purple-400 transition-colors border border-purple-500 hover:border-purple-400 px-4 py-2 rounded-full"
-      >
-        Visitar
-        <ArrowUpRight className="w-4 h-4" />
-      </Link>
-    ) : (
-      <button className="absolute bottom-8 right-8 flex items-center gap-2 text-purple-500 hover:text-purple-400 transition-colors border border-purple-500 hover:border-purple-400 px-4 py-2 rounded-full">
-        Visitar
-        <ArrowUpRight className="w-4 h-4" />
-      </button>
-    )}
   </motion.div>
 );
 
@@ -110,16 +94,14 @@ const Index = () => {
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
             <ProjectCard
-              title="Loja de Itens"
-              description="E-commerce simples com funcionalidade de carrinho de compras e finalização de compra."
+              title="Projeto 1"
+              description="Uma aplicação web moderna construída com React e TypeScript."
               tags={["React", "TypeScript", "TailwindCSS"]}
-              link="/ecommerce"
             />
             <ProjectCard
-              title="Sistema de Gerenciamento de Tarefas"
-              description="Sistema de organização de tarefas com prioridades e datas de vencimento."
-              tags={["React", "TypeScript", "TailwindCSS"]}
-              link="/taskmanager"
+              title="Projeto 2"
+              description="Sistema de gerenciamento de conteúdo responsivo e escalável."
+              tags={["Next.js", "Node.js", "MongoDB"]}
             />
           </div>
         </section>
