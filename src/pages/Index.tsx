@@ -1,21 +1,25 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
 
 const ProjectCard = ({ title, description, tags }: { title: string; description: string; tags: string[] }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
-    className="bg-[#1C1C1C] p-8 rounded-3xl h-full"
+    className="bg-[#1C1C1C] p-8 rounded-3xl h-full relative"
   >
     <h3 className="text-2xl font-bold mb-4">{title}</h3>
     <p className="text-gray-400 mb-6">{description}</p>
-    <div className="flex flex-wrap gap-3">
+    <div className="flex flex-wrap gap-3 mb-12">
       {tags.map((tag, index) => (
         <span key={index} className="bg-[#2A2A2A] px-4 py-2 rounded-full text-sm">{tag}</span>
       ))}
     </div>
+    <button className="absolute bottom-8 right-8 flex items-center gap-2 text-purple-500 hover:text-purple-400 transition-colors">
+      Visitar
+      <ArrowUpRight className="w-4 h-4" />
+    </button>
   </motion.div>
 );
 
