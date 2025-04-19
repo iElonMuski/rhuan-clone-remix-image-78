@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
@@ -115,9 +116,10 @@ const Index = () => {
               link="/ecommerce"
             />
             <ProjectCard
-              title="Projeto 2"
-              description="Sistema de gerenciamento de conteúdo responsivo e escalável."
-              tags={["Next.js", "Node.js", "MongoDB"]}
+              title="Sistema de Gerenciamento de Tarefas"
+              description="Sistema de organização de tarefas com prioridades e datas de vencimento."
+              tags={["React", "TypeScript", "TailwindCSS"]}
+              link="/taskmanager"
             />
           </div>
         </section>
