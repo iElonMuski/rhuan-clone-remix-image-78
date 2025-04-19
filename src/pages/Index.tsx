@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -65,6 +64,7 @@ const Index = () => {
               </a>
             </motion.div>
           </div>
+          
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -73,7 +73,7 @@ const Index = () => {
           >
             <div className="w-full h-[400px] relative overflow-hidden rounded-3xl">
               <img 
-                src="/minha-foto.jpg" 
+                src="https://drive.google.com/uc?export=download&id=1JL_vt7x-45a-KZFs8z7Ze2vYSo6tKT6n" 
                 alt="Igor"
                 className="w-full h-full object-cover"
               />
