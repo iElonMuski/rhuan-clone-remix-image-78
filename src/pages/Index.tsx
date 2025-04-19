@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
@@ -16,7 +17,7 @@ const ProjectCard = ({ title, description, tags }: { title: string; description:
         <span key={index} className="bg-[#2A2A2A] px-4 py-2 rounded-full text-sm">{tag}</span>
       ))}
     </div>
-    <button className="absolute bottom-8 right-8 flex items-center gap-2 text-purple-500 hover:text-purple-400 transition-colors">
+    <button className="absolute bottom-8 right-8 flex items-center gap-2 text-purple-500 hover:text-purple-400 transition-colors border border-purple-500 hover:border-purple-400 px-4 py-2 rounded-full">
       Visitar
       <ArrowUpRight className="w-4 h-4" />
     </button>
