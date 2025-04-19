@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const ProjectCard = ({ title, description, tags }: { title: string; description: string; tags: string[] }) => (
+const ProjectCard = ({ title, description, tags, link }: { title: string; description: string; tags: string[], link?: string }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -17,10 +17,20 @@ const ProjectCard = ({ title, description, tags }: { title: string; description:
         <span key={index} className="bg-[#2A2A2A] px-4 py-2 rounded-full text-sm">{tag}</span>
       ))}
     </div>
-    <button className="absolute bottom-8 right-8 flex items-center gap-2 text-purple-500 hover:text-purple-400 transition-colors border border-purple-500 hover:border-purple-400 px-4 py-2 rounded-full">
-      Visitar
-      <ArrowUpRight className="w-4 h-4" />
-    </button>
+    {link ? (
+      <Link 
+        to={link} 
+        className="absolute bottom-8 right-8 flex items-center gap-2 text-purple-500 hover:text-purple-400 transition-colors border border-purple-500 hover:border-purple-400 px-4 py-2 rounded-full"
+      >
+        Visitar
+        <ArrowUpRight className="w-4 h-4" />
+      </Link>
+    ) : (
+      <button className="absolute bottom-8 right-8 flex items-center gap-2 text-purple-500 hover:text-purple-400 transition-colors border border-purple-500 hover:border-purple-400 px-4 py-2 rounded-full">
+        Visitar
+        <ArrowUpRight className="w-4 h-4" />
+      </button>
+    )}
   </motion.div>
 );
 
@@ -99,9 +109,10 @@ const Index = () => {
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
             <ProjectCard
-              title="Projeto 1"
-              description="Uma aplicação web moderna construída com React e TypeScript."
+              title="Loja de Itens"
+              description="E-commerce simples com funcionalidade de carrinho de compras e finalização de compra."
               tags={["React", "TypeScript", "TailwindCSS"]}
+              link="/ecommerce"
             />
             <ProjectCard
               title="Projeto 2"
